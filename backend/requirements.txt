@@ -1,0 +1,24 @@
+# Core API
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7
+python-dotenv>=1.0
+
+# Document processing / reports
+pypdf>=4.2
+reportlab>=4.0
+numpy>=1.26
+
+# Retrieval. If faiss-cpu fails to install on your Python version the app still
+# works: it falls back to an exact numpy search (same results, slower at scale).
+faiss-cpu>=1.8
+
+# GenAI (LangChain ecosystem + LangGraph)
+langchain-core>=0.3
+langchain-ollama>=0.2
+langgraph>=0.2
+
+# Optional - only if you set LLM_PROVIDER=openai or EMBEDDING_PROVIDER=sentence_transformers
+# langchain-openai>=0.2
+# sentence-transformers>=3.0
